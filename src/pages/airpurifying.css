@@ -1,0 +1,107 @@
+/* ========== Grid Layout ========== */
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Always 4 columns on desktop */
+  gap: 20px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  justify-items: center;
+}
+
+/* ========== Plant Card ========== */
+.plant-card {
+  background-color:white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Image ========== */
+.plant-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ========== Text ========== */
+.plant-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #2e2e2e;
+}
+
+.plant-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 4px 0;
+}
+
+.review-count {
+  font-size: 0.85rem;
+  color: #f39c12;
+  margin-bottom: 8px;
+}
+
+/* ========== Buttons ========== */
+.plant-card button {
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin: 5px 4px 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plant-card button:hover {
+  background-color: #2e7d32;
+}
+.plant-card .price {
+  color: #e53935; /* red */
+  font-size: 1.2rem; /* bigger font */
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+  .plant-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+
+  .plant-card {
+    max-width: 90%;
+  }
+
+  .plant-image {
+    height: 180px;
+  }
+}

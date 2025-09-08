@@ -1,0 +1,129 @@
+/* ========== Container ========== */
+.seeds-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ========== Title ========== */
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Grid Layout ========== */
+.seeds-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row on desktop */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* ========== Seed Card ========== */
+.seed-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seed-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Image ========== */
+.seed-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ========== Text ========== */
+.seed-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e2e2e;
+  margin: 0.5rem 0;
+}
+
+.seed-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 4px 0;
+}
+
+.seed-card .price {
+  color: #e53935; /* red */
+  font-size: 1.2rem; /* bigger font */
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.seed-card .review {
+  font-size: 0.85rem;
+  color: black;
+  margin-bottom: 8px;
+}
+
+/* ========== Buttons ========== */
+.seed-card button {
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin: 5px 4px 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.seed-card button:hover {
+  background-color: #2e7d32;
+}
+
+.seed-card button:first-of-type {
+  background-color: green; /* Wishlist button */
+}
+
+.seed-card button:first-of-type:hover {
+  background-color:green;
+}
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 1024px) {
+  .seeds-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .seeds-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .seeds-grid {
+    grid-template-columns: 1fr; /* 1 card */
+  }
+
+  .seed-card {
+    max-width: 90%;
+  }
+
+  .seed-card img {
+    height: 180px;
+  }
+}

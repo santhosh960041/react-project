@@ -1,0 +1,44 @@
+.lowlight-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.lowlight-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2e7d32;
+}
+
+/* Grid layout - 3 cards per row */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);; /* ✅ 3 columns */
+  gap: 2rem;
+}
+
+
+.plant-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

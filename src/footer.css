@@ -1,0 +1,123 @@
+/* ===== Footer Global ===== */
+.footer {
+  background-color: #1b1b1b;
+  color: #eee;
+  padding: 3rem 2rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+  border-top: 4px solid #4caf50;
+}
+
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* ===== Top Section (Grid) ===== */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+/* ===== Logo & Contact Info ===== */
+.footer-column h2 {
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* ===== Social Icons ===== */
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #4caf50;
+}
+
+/* ===== Quick Links and Help ===== */
+.footer-column h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* ===== Subscribe Section ===== */
+.footer-column input[type="email"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.footer-column button {
+  margin-top: 8px;
+  padding: 8px 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-column button:hover {
+  background-color: #45a049;
+}
+
+.ssl-secured {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+/* ===== Footer Bottom ===== */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    margin-bottom: 2rem;
+  }
+}

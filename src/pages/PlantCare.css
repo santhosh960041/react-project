@@ -1,0 +1,111 @@
+/* ===== Container Styles ===== */
+.plantcare-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* ===== Section Title ===== */
+.page-title {
+  font-size: 2rem;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ===== Grid Layout ===== */
+.plantcare-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards on desktop */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* ===== Plant Card Styles ===== */
+.plantcare-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  padding: 1rem;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.plantcare-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Image Styling ===== */
+.plantcare-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== Text Styling ===== */
+.plantcare-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.plantcare-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.plantcare-card .price {
+  color: #e53935; /* red color for price */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ===== Button Styling ===== */
+.plantcare-card button {
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin: 6px 5px 0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plantcare-card button:hover {
+  background-color: #2e7d32;
+}
+
+/* ===== Responsive Grid ===== */
+@media (max-width: 1024px) {
+  .plantcare-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .plantcare-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .plantcare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plantcare-card {
+    max-width: 90%;
+  }
+
+  .plantcare-card img {
+    height: 180px;
+  }
+}
