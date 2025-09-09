@@ -4,18 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from "./CartContext";
-import { WishlistProvider } from "./WishlistContext"; // ⬅️
+import { WishlistProvider } from "./WishlistContext";
+import { HashRouter } from "react-router-dom"; // ⬅️ Import HashRouter
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <CartProvider>
-     <WishlistProvider>
-      <App />
+    <WishlistProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
     </WishlistProvider>
   </CartProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
